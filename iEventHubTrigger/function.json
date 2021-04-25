@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "eventHubMessages",
+      "direction": "in",
+      "eventHubName": "storage-events",
+      "connection": "myeventhub40_RootManageSharedAccessKey_EVENTHUB",
+      "cardinality": "many",
+      "consumerGroup": "$Default"
+    },
+    {
+      "name": "outputTable",
+      "tableName": "eventsLog",
+      "connection": "storagensjp4quf6ou5i_STORAGE",
+      "direction": "out",
+      "type": "table"
+    }
+  ]
+}
